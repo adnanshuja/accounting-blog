@@ -10,6 +10,13 @@ import Image31 from "../images/Image31.png";
 import Image40 from "../images/Image40.png";
 import BannerImage from "../images/banner.jpg";
 
+import Image001 from "../images/client1.jpg";
+import Image002 from "../images/sign-1.png";
+import Image003 from "../images/client2.jpg";
+import Image004 from "../images/sign-1.png";
+import Image005 from "../images/client3.jpg";
+import Image006 from "../images/sign-1.png";
+
 function AboutusPage() {
   return (
     <main>
@@ -35,8 +42,8 @@ function AboutusPage() {
                   <img className="img-fluid" src={Image20} alt="" />
                 </div>
               </div>
-              <div className="col-md-4">
-                <div className="items-title text-left mt-5">
+              <div className="col-md-6">
+                <div className="items-title text-left flex-center-section">
                   <h3>Talk to real person now</h3>
                   <p>
                     When you ring us you are not going to be placed in a
@@ -51,7 +58,7 @@ function AboutusPage() {
                     Book a call with our experts to see what we can do for you.
                   </p>
 
-                  <div className="items-btn text-center">
+                  <div className="items-btn mt-3">
                     <button className="yellow-btn btn btn-primary">
                       Contact Us
                     </button>
@@ -63,17 +70,15 @@ function AboutusPage() {
           </div>
         </section>
 
-        <section className="section-space-70">
-          <div className="container heading-title">
-            <h2>Tracking the ROI of the portfolio</h2>
-          </div>
-        </section>
 
         <section className="talk-us section-space-50">
           <div className="container">
+          <div className=" heading-title ">
+            <h2>Tracking the ROI of the portfolio</h2>
+          </div>
             <div className="row">
               <div className="col-md-6">
-                <div className="items-title text-left">
+                <div className="items-title text-left flex-center-section">
                   <p>
                     The investors entrust their funds in a portfolio expecting a
                     good return. Naturally, they do a lot of research such as
@@ -100,53 +105,58 @@ function AboutusPage() {
             </div>
           </div>
         </section>
+        <section class="clients-reviews">
+                <div class="container">
+                    <div class="heading-title">
+                        <h2>Meet <span>Our Team</span></h2>                        
+                    </div>
+                    <div class="items-title">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="client-box">
+                                    <img src={Image001} alt="" />
+                                    <h3>Jack Cohen</h3>
+                                    <p>“I used Finacbooks for my tax return and CIS returns. I am very happy with the
+                                        service I received. As a small business, I wanted a personal service and I will
+                                        definitely use again.“</p>
+                                    <img src={Image002} alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="client-box">
+                                    <img src={Image003} alt="" />
+                                    <h3>Jack Cohen</h3>
+                                    <p>“I used Finacbooks for my tax return and CIS returns. I am very happy with the
+                                        service I received. As a small business, I wanted a personal service and I will
+                                        definitely use again.“</p>
+                                    <img src={Image004} alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="client-box">
+                                    <img src={Image005} alt="" />
+                                    <h3>Jack Cohen</h3>
+                                    <p>“I used Finacbooks for my tax return and CIS returns. I am very happy with the
+                                        service I received. As a small business, I wanted a personal service and I will
+                                        definitely use again.“</p>
+                                    <img src={Image006} alt="" />
+                                </div>
+                            </div>
 
-        <section className="our-consultants">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        <section className="section-space-70 our-process">
           <div className="container">
-            <div className="heading-title">
-              <h2>Contact Us</h2>
-            </div>
-            <div className="row align-content-center">
-              <div className="col-md-1">
-                <ul>
-                  <li>
-                    <img className="img-fluid" src={Image23} alt="" />
-                  </li>
-                  <li>
-                    <img className="img-fluid" src={Image24} alt="" />
-                  </li>
-                  <li>
-                    <img className="img-fluid" src={Image26} alt="" />
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-md-3">
-                <div>
-                  <img className="img-fluid w-100" src={Image23} alt="" />
-                </div>
-              </div>
-              <div className="col-md-8">
-                <div className="items-title text-left">
-                  <h3>Robert Hymers, MST (Taxation)</h3>
-                  <p>Managing Partner</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section-space-70">
           <div className="container heading-title">
             <h2>Our Process</h2>
           </div>
-        </section>
-
-        <section className="our-process">
-          <div className="container">
-            <div className="row">
+          <div className="row">
               <div className="col-md-5">
-                <div className="items-title text-left">
+              <div className="items-title text-left flex-center-section">
                   <h3> Bookkeeping</h3>
                   <p>
                     {" "}
@@ -158,10 +168,24 @@ function AboutusPage() {
                     book.
                   </p>
                 </div>
-                <div className="process-img">
+              </div>
+              <div className="col-md-2"></div>
+              <div className="col-md-5">
+              <div className="process-img">
+                  <img className="img-fluid" src={Image28} alt="" />
+                </div>
+              </div>
+          </div>
+          <div className="row">
+              <div className="col-md-5">
+              <div className="process-img">
                   <img className="img-fluid" src={Image29} alt="" />
                 </div>
-                <div className="items-title text-left">
+
+              </div>
+              <div className="col-md-2"></div>
+              <div className="col-md-5">
+              <div className="items-title text-left flex-center-section">
                   <h3> Statutory end of year accounts</h3>
                   <p>
                     {" "}
@@ -173,12 +197,56 @@ function AboutusPage() {
                     book.
                   </p>
                 </div>
-                <div className="process-img">
+              </div>
+          </div>
+          <div className="row">
+              <div className="col-md-5">
+              <div className="items-title text-left flex-center-section">
+                  <h3> Statutory end of year accounts</h3>
+                  <p>
+                    {" "}
+                    Lorem ipsum, or lipsum as it is sometimes known, is dummy
+                    text used in laying out print, graphic or web designs. The
+                    passage is attributed to an unknown typesetter in the 15th
+                    century who is thought to have scrambled parts of Cicero’s
+                    De Finibus Bonorum et Malorum for use in a type specimen
+                    book.
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-2"></div>
+              <div className="col-md-5">
+              <div className="process-img">
+                  <img className="img-fluid" src={Image30} alt="" />
+                </div>
+              </div>
+          </div>
+          <div className="row">
+              
+              
+              <div className="col-md-5">
+              <div className="process-img">
                   <img className="img-fluid" src={Image31} alt="" />
                 </div>
               </div>
+              <div className="col-md-2"></div>
+              <div className="col-md-5">
+              <div className="items-title text-left flex-center-section">
+                  <h3> Statutory end of year accounts</h3>
+                  <p>
+                    {" "}
+                    Lorem ipsum, or lipsum as it is sometimes known, is dummy
+                    text used in laying out print, graphic or web designs. The
+                    passage is attributed to an unknown typesetter in the 15th
+                    century who is thought to have scrambled parts of Cicero’s
+                    De Finibus Bonorum et Malorum for use in a type specimen
+                    book.
+                  </p>
+                </div>
+              </div>
+          </div>
 
-              <div className="col-md-2">
+              {/* <div className="col-md-2">
                 <div className="center-line">
                   <div className="line">
                     <div className="circle"></div>
@@ -187,43 +255,7 @@ function AboutusPage() {
                     <div className="circle4"></div>
                   </div>
                 </div>
-              </div>
-
-              <div className="col-md-5">
-                <div className="process-img">
-                  <img className="img-fluid" src={Image28} alt="" />
-                </div>
-                <div className="items-title text-left">
-                  <h3> Monthly management accounts</h3>
-                  <p>
-                    {" "}
-                    Lorem ipsum, or lipsum as it is sometimes known, is dummy
-                    text used in laying out print, graphic or web designs. The
-                    passage is attributed to an unknown typesetter in the 15th
-                    century who is thought to have scrambled parts of Cicero’s
-                    De Finibus Bonorum et Malorum for use in a type specimen
-                    book.
-                  </p>
-                </div>
-
-                <div className="process-img">
-                  <img className="img-fluid" src={Image30} alt="" />
-                </div>
-
-                <div className="items-title text-left">
-                  <h3> Self assessment tax return</h3>
-                  <p>
-                    {" "}
-                    Lorem ipsum, or lipsum as it is sometimes known, is dummy
-                    text used in laying out print, graphic or web designs. The
-                    passage is attributed to an unknown typesetter in the 15th
-                    century who is thought to have scrambled parts of Cicero’s
-                    De Finibus Bonorum et Malorum for use in a type specimen
-                    book.
-                  </p>
-                </div>
-              </div>
-            </div>
+              </div> */}
           </div>
         </section>
 

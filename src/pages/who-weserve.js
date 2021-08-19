@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BannerImage from "../images/banner.jpg";
 
 import Service10 from "../images/service10.png";
@@ -64,9 +65,13 @@ function WhoWeServePage() {
                       to help your business build the strong foundations it
                       needs to grow.
                     </p>
-                    <a href="#" className="yellow-btn">
+                    <Link
+                      className="yellow-btn"
+                      to="/whoweserve1"
+                    >
                       Find Out More
-                    </a>
+                    </Link>
+                    
                   </div>
                 </li>
                 <li className="">
@@ -80,9 +85,12 @@ function WhoWeServePage() {
                       This can take its toll on the amount of free time you have
                       to spend on the important things in life.
                     </p>
-                    <a href="#" className="yellow-btn">
+                    <Link
+                      className="yellow-btn"
+                      to="/whoweserve1"
+                    >
                       Find Out More
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="">
@@ -95,9 +103,12 @@ function WhoWeServePage() {
                       removing the stress associated with doing your own
                       accounts, tax and bookkeeping.
                     </p>
-                    <a href="#" className="yellow-btn">
+                    <Link
+                      className="yellow-btn"
+                      to="/whoweserve1"
+                    >
                       Find Out More
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="">
@@ -109,9 +120,12 @@ function WhoWeServePage() {
                       and a real headache, don’t worry, Mazuma’s Limited Company
                       Accounts service can help.
                     </p>
-                    <a href="#" className="yellow-btn">
+                    <Link
+                      className="yellow-btn"
+                      to="/whoweserve1"
+                    >
                       Find Out More
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="">
@@ -124,9 +138,12 @@ function WhoWeServePage() {
                       expert team of accountants for freelancers will crunch
                       your numbers so you don’t have to.
                     </p>
-                    <a href="#" className="yellow-btn">
+                    <Link
+                      className="yellow-btn"
+                      to="/whoweserve1"
+                    >
                       Find Out More
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="">
@@ -140,9 +157,12 @@ function WhoWeServePage() {
                       various different tax returns, accounts and filing
                       deadlines that running an LLP requires.
                     </p>
-                    <a href="#" className="yellow-btn">
+                    <Link
+                      className="yellow-btn"
+                      to="/whoweserve1"
+                    >
                       Find Out More
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="">
@@ -156,9 +176,12 @@ function WhoWeServePage() {
                       time to run their businesses and less time on accounts and
                       tax admin.
                     </p>
-                    <a href="#" className="yellow-btn">
+                    <Link
+                      className="yellow-btn"
+                      to="/whoweserve1"
+                    >
                       Find Out More
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="">
@@ -171,9 +194,12 @@ function WhoWeServePage() {
                       stressing about your business finances when Mazuma’s team
                       of expert accountants can take care of everything for you.
                     </p>
-                    <a href="#" className="yellow-btn">
+                    <Link
+                      className="yellow-btn"
+                      to="/whoweserve1"
+                    >
                       Find Out More
-                    </a>
+                    </Link>
                   </div>
                 </li>
               </ul>

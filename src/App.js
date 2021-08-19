@@ -7,10 +7,13 @@ import BlogsPage from "./pages/blogs.js";
 import IndexPage from "./pages/index.js";
 import AboutusPage from "./pages/about.js";
 import OfficesPage from "./pages/offices.js";
+import Office1 from "./pages/offices/offices1.js";
 import ContactusPage from "./pages/contact.js";
 import ServicesPage from "./pages/services.js";
 import WhoWeServePage from "./pages/who-weserve.js";
 import BlogDetailPage from "./pages/single-blog.js";
+import Resources from "./pages/resources";
+import Whoweserve1 from "./pages/whoweserve/whoweserve1";
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
           <Route path="/offices">
             <OfficesPage />
           </Route>
+          <Route path="/office1">
+            <Office1 />
+          </Route>
           <Route path="/services">
             <ServicesPage />
           </Route>
@@ -41,6 +47,14 @@ function App() {
           </Route>
           <Route path="/blog-details">
             <BlogDetailPage />
+          </Route>
+          <Route path="/resources">
+            <Resources />
+          </Route>
+
+
+          <Route path="/whoweserve1">
+            <Whoweserve1 />
           </Route>
         </Switch>
         <Footer />

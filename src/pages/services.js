@@ -23,7 +23,7 @@ function ServicesPage() {
             <div className="heading-title">
               <h2>
                 We set up Indigo in response to <br />
-                listening carefully to the needs of individuals and businesses
+                listening carefully to the needs of individuals and businesses <br /> 
                 <span>who wanted more than just a jobbing accountant.</span>
               </h2>
               <p>
@@ -50,6 +50,7 @@ function ServicesPage() {
                       revolution, embracing technology and encouraging all of
                       our clients to use cloud software.
                     </p>
+                    <a href="#" class="yellow-btn">Learn More</a>
                   </div>
                 </div>
                 <div className="col-md-4">
