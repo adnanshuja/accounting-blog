@@ -5,7 +5,7 @@ import Logo from "../images/logo.png";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-md navbar-light">
-      <a className="navbar-brand" href="https://front.codes/" target="_blank">
+      <a className="navbar-brand" href="/">
         <img src={Logo} alt="" />
       </a>
 
@@ -21,11 +21,11 @@ function Navbar() {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto py-4 py-md-0">
-          <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+          <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
             <Link
-              className="nav-link dropdown-toggle"
+              className="nav-link"
               to="/"
               role="button"
               aria-haspopup="true"
@@ -47,6 +47,11 @@ function Navbar() {
           <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
             <Link className="nav-link" to="/who-we-serve">
               Who We Serve
+            </Link>
+          </li>
+          <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+            <Link className="nav-link" to="/resources">
+              Resources
             </Link>
           </li>
           <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
