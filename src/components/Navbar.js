@@ -21,7 +21,10 @@ function Navbar() {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <div
+        className="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
         <ul className="navbar-nav ml-auto py-4 py-md-0">
           <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
             <Link
@@ -67,6 +70,11 @@ function Navbar() {
           <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
             <Link className="nav-link" to="/blogs">
               Blog
+            </Link>
+          </li>
+          <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+            <Link className="nav-link" to="/login">
+              Admin
             </Link>
           </li>
         </ul>
