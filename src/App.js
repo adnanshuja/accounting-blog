@@ -10,9 +10,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Web} />
-        <PublicRoute path="/login" component={Login} />
-        <PrivateRoute path="/admin" component={Admin} />
+        <PublicRoute exact path="/login" component={Login} />
+        <PrivateRoute exact path="/admin" component={Admin} />
+        <Route path="/" component={Web} />
       </Switch>
     </Router>
   );

@@ -19,19 +19,17 @@ function Web(props) {
   return (
     <div>
       <Header />
-      <Switch>
-        <Route path="/" component={IndexPage} />
-        <Route path="/about" component={AboutusPage} />
-        <Route path="/contact" component={ContactusPage} />
-        <Route path="/offices" component={OfficesPage} />
-        <Route path="/office1" component={Office1} />
-        <Route path="/services" component={ServicesPage} />
-        <Route path="/blogs" component={BlogsPage} />
-        <Route path="/who-we-serve" component={WhoWeServePage} />
-        <Route path="/blog-details" component={BlogDetailPage} />
-        <Route path="/resources" component={Resources} />
-        <Route path="/whoweserve1" component={Whoweserve1} />
-      </Switch>
+      <Route exact path="/" component={IndexPage} />
+      <Route path="/about" component={AboutusPage} />
+      <Route path="/contact" component={ContactusPage} />
+      <Route path="/offices" component={OfficesPage} />
+      <Route path="/office1" component={Office1} />
+      <Route path="/services" component={ServicesPage} />
+      <Route path="/blogs" component={BlogsPage} />
+      <Route path="/who-we-serve" component={WhoWeServePage} />
+      <Route path="/blog-details" component={BlogDetailPage} />
+      <Route path="/resources" component={Resources} />
+      <Route path="/whoweserve1" component={Whoweserve1} />
       <Footer />
     </div>
   );
