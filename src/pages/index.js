@@ -43,7 +43,7 @@ function IndexPage() {
                   </div>
                 </div>
               </div>
-              <div className="item">
+              {/* <div className="item">
                 <div className="content-wrapper">
                   <div className="">
                     <div className="content-wrapper">
@@ -99,6 +99,7 @@ function IndexPage() {
                   </div>
                 </div>
               </div>
+             */}
             </div>
           </div>
         </section>
