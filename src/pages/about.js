@@ -70,12 +70,11 @@ function AboutusPage() {
           </div>
         </section>
 
-
         <section className="talk-us section-space-50">
           <div className="container">
-          <div className=" heading-title ">
-            <h2>Tracking the ROI of the portfolio</h2>
-          </div>
+            <div className=" heading-title ">
+              <h2>Tracking the ROI of the portfolio</h2>
+            </div>
             <div className="row">
               <div className="col-md-6">
                 <div className="items-title text-left flex-center-section">
@@ -105,58 +104,67 @@ function AboutusPage() {
             </div>
           </div>
         </section>
-        <section class="clients-reviews">
-                <div class="container">
-                    <div class="heading-title">
-                        <h2>Meet <span>Our Team</span></h2>                        
-                    </div>
-                    <div class="items-title">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="client-box">
-                                    <img src={Image001} alt="" />
-                                    <h3>Jack Cohen</h3>
-                                    <p>“I used Finacbooks for my tax return and CIS returns. I am very happy with the
-                                        service I received. As a small business, I wanted a personal service and I will
-                                        definitely use again.“</p>
-                                    <img src={Image002} alt="" />
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="client-box">
-                                    <img src={Image003} alt="" />
-                                    <h3>Jack Cohen</h3>
-                                    <p>“I used Finacbooks for my tax return and CIS returns. I am very happy with the
-                                        service I received. As a small business, I wanted a personal service and I will
-                                        definitely use again.“</p>
-                                    <img src={Image004} alt="" />
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="client-box">
-                                    <img src={Image005} alt="" />
-                                    <h3>Jack Cohen</h3>
-                                    <p>“I used Finacbooks for my tax return and CIS returns. I am very happy with the
-                                        service I received. As a small business, I wanted a personal service and I will
-                                        definitely use again.“</p>
-                                    <img src={Image006} alt="" />
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+        <section className="clients-reviews">
+          <div className="container">
+            <div className="heading-title">
+              <h2>
+                Meet <span>Our Team</span>
+              </h2>
+            </div>
+            <div className="items-title">
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="client-box">
+                    <img src={Image001} alt="" />
+                    <h3>Jack Cohen</h3>
+                    <p>
+                      “I used Finacbooks for my tax return and CIS returns. I am
+                      very happy with the service I received. As a small
+                      business, I wanted a personal service and I will
+                      definitely use again.“
+                    </p>
+                    <img src={Image002} alt="" />
+                  </div>
                 </div>
-            </section>
-
+                <div className="col-md-4">
+                  <div className="client-box">
+                    <img src={Image003} alt="" />
+                    <h3>Jack Cohen</h3>
+                    <p>
+                      “I used Finacbooks for my tax return and CIS returns. I am
+                      very happy with the service I received. As a small
+                      business, I wanted a personal service and I will
+                      definitely use again.“
+                    </p>
+                    <img src={Image004} alt="" />
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="client-box">
+                    <img src={Image005} alt="" />
+                    <h3>Jack Cohen</h3>
+                    <p>
+                      “I used Finacbooks for my tax return and CIS returns. I am
+                      very happy with the service I received. As a small
+                      business, I wanted a personal service and I will
+                      definitely use again.“
+                    </p>
+                    <img src={Image006} alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section className="section-space-70 our-process">
           <div className="container">
-          <div className="container heading-title">
-            <h2>Our Process</h2>
-          </div>
-          <div className="row">
+            <div className="container heading-title">
+              <h2>Our Process</h2>
+            </div>
+            <div className="row">
               <div className="col-md-5">
-              <div className="items-title text-left flex-center-section">
+                <div className="items-title text-left flex-center-section">
                   <h3> Bookkeeping</h3>
                   <p>
                     {" "}
@@ -171,21 +179,20 @@ function AboutusPage() {
               </div>
               <div className="col-md-2"></div>
               <div className="col-md-5">
-              <div className="process-img">
+                <div className="process-img">
                   <img className="img-fluid" src={Image28} alt="" />
                 </div>
               </div>
-          </div>
-          <div className="row">
+            </div>
+            <div className="row">
               <div className="col-md-5">
-              <div className="process-img">
+                <div className="process-img">
                   <img className="img-fluid" src={Image29} alt="" />
                 </div>
-
               </div>
               <div className="col-md-2"></div>
               <div className="col-md-5">
-              <div className="items-title text-left flex-center-section">
+                <div className="items-title text-left flex-center-section">
                   <h3> Statutory end of year accounts</h3>
                   <p>
                     {" "}
@@ -198,10 +205,10 @@ function AboutusPage() {
                   </p>
                 </div>
               </div>
-          </div>
-          <div className="row">
+            </div>
+            <div className="row">
               <div className="col-md-5">
-              <div className="items-title text-left flex-center-section">
+                <div className="items-title text-left flex-center-section">
                   <h3> Statutory end of year accounts</h3>
                   <p>
                     {" "}
@@ -216,22 +223,20 @@ function AboutusPage() {
               </div>
               <div className="col-md-2"></div>
               <div className="col-md-5">
-              <div className="process-img">
+                <div className="process-img">
                   <img className="img-fluid" src={Image30} alt="" />
                 </div>
               </div>
-          </div>
-          <div className="row">
-              
-              
+            </div>
+            <div className="row">
               <div className="col-md-5">
-              <div className="process-img">
+                <div className="process-img">
                   <img className="img-fluid" src={Image31} alt="" />
                 </div>
               </div>
               <div className="col-md-2"></div>
               <div className="col-md-5">
-              <div className="items-title text-left flex-center-section">
+                <div className="items-title text-left flex-center-section">
                   <h3> Statutory end of year accounts</h3>
                   <p>
                     {" "}
@@ -244,9 +249,9 @@ function AboutusPage() {
                   </p>
                 </div>
               </div>
-          </div>
+            </div>
 
-              {/* <div className="col-md-2">
+            {/* <div className="col-md-2">
                 <div className="center-line">
                   <div className="line">
                     <div className="circle"></div>

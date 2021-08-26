@@ -146,7 +146,7 @@ function IndexPage() {
                 </li>
               </ul>
               <div className="text-center">
-                <a href="#" class="yellow-btn">
+                <a href="#" className="yellow-btn">
                   Our Services
                 </a>
               </div>
@@ -154,19 +154,16 @@ function IndexPage() {
           </div>
         </section>
 
-        <section class="call-treetops section-space-60">
-          <div class="container">
-            <div class="heading-title text-center">
-              <h3 class="mb-4">
+        <section className="call-treetops section-space-60">
+          <div className="container">
+            <div className="heading-title text-center">
+              <h3 className="mb-4">
                 Are you looking for professional advice for your Business or
                 your industry?
               </h3>
 
-         
-
-
-              <div class="items-btn">
-                <a href="#" class="yellow-btn">
+              <div className="items-btn">
+                <a href="#" className="yellow-btn">
                   Get a Free Quote
                 </a>
               </div>
@@ -174,24 +171,24 @@ function IndexPage() {
           </div>
         </section>
 
-        <section class="we-serve section-space-60">
-          <div class="">
-            <div class="heading-title">
+        <section className="we-serve section-space-60">
+          <div className="">
+            <div className="heading-title">
               <h2>Who we Serve</h2>
             </div>
           </div>
         </section>
 
-        <section class="choose-us">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 ">
+        <section className="choose-us">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6 ">
                 <img className="img-fluid" src={SideImage1} alt="" />
               </div>
-              <div class="col-md-6">
-                <div class="items-title text-left">
+              <div className="col-md-6">
+                <div className="items-title text-left">
                   <h2>How can we help you</h2>
-                  <ul class="">
+                  <ul className="">
                     <li>
                       Lorem ipsum dolor sit amet, consectetur adipiscing Eli
                       Condimentum dia
@@ -206,25 +203,25 @@ function IndexPage() {
                     </li>
                   </ul>
 
-                  <div class="mt-3">
-                    <a href="#" class="yellow-btn">
+                  <div className="mt-3">
+                    <a href="#" className="yellow-btn">
                       Contact Us
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-2"></div>
+              <div className="col-md-2"></div>
             </div>
           </div>
         </section>
-        <section class="testimonials section-space-70">
-          <div class="container">
-            <div class="items-title">
+        <section className="testimonials section-space-70">
+          <div className="container">
+            <div className="items-title">
               <h2>Testimonials</h2>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="green-box">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="green-box">
                     <h4>Incredible Experience</h4>
                     <p>
                       We had an incredible experience working with Landify and
@@ -236,7 +233,7 @@ function IndexPage() {
                       product.
                     </p>
                   </div>
-                  <div class="person-icon">
+                  <div className="person-icon">
                     <ul>
                       <li>
                         <img className="img-fluid" src={PersonIcon} alt="" />
@@ -249,8 +246,8 @@ function IndexPage() {
                   </div>
                 </div>
 
-                <div class="col-md-6">
-                  <div class="green-box">
+                <div className="col-md-6">
+                  <div className="green-box">
                     <h4>Dependable, Responsive, Professional Partner</h4>
                     <p>
                       We had an incredible experience working with Landify and
@@ -262,7 +259,7 @@ function IndexPage() {
                       product.
                     </p>
                   </div>
-                  <div class="person-icon">
+                  <div className="person-icon">
                     <ul>
                       <li>
                         <img className="img-fluid" src={PersonIcon} alt="" />
@@ -279,22 +276,22 @@ function IndexPage() {
           </div>
         </section>
 
-        <section class="subscribe-us section-space-30 theme-bg">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
+        <section className="subscribe-us section-space-30 theme-bg">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-4">
                 <img className="img-fluid" src={SideImage2} alt="" />
               </div>
-              <div class="col-md-8">
-                <div class="heading-title text-left">
-                  <h2 class="text-white">Subscribe to Our Newsletter</h2>
-                  <div class="input-group">
+              <div className="col-md-8">
+                <div className="heading-title text-left">
+                  <h2 className="text-white">Subscribe to Our Newsletter</h2>
+                  <div className="input-group">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       placeholder="Email..."
                     />
-                    <a href="#" class="yellow-btn">
+                    <a href="#" className="yellow-btn">
                       {" "}
                       Switch Now
                     </a>
@@ -305,9 +302,9 @@ function IndexPage() {
           </div>
         </section>
 
-        <section class="line">
-          <div class="">
-            <div class="circle"></div>
+        <section className="line">
+          <div className="">
+            <div className="circle"></div>
           </div>
         </section>
       </article>

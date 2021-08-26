@@ -156,7 +156,7 @@ function ContactusPage() {
                           />
                           <label
                             className="custom-control-label"
-                            for="customControlAutosizing"
+                            htmlFor="customControlAutosizing"
                           >
                             Agree to our terms and conditions
                           </label>

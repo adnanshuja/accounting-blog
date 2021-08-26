@@ -1,7 +1,27 @@
+import React, { useEffect, useState } from "react";
 import SideImage1 from "../images/sideimg1.png";
 import BannerImage from "../images/banner.jpg";
+import axios from "axios";
 
 function ServicesPage() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [servicesList, setServicesList] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get(
+          "http://18.219.85.59:3001/api/service/get-all"
+        );
+
+        setServicesList(response.data.data);
+        setIsLoading(false);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetchBlogs();
+  }, [servicesList]);
   return (
     <main>
       <article>
@@ -23,7 +43,8 @@ function ServicesPage() {
             <div className="heading-title">
               <h2>
                 We set up Indigo in response to <br />
-                listening carefully to the needs of individuals and businesses <br /> 
+                listening carefully to the needs of individuals and businesses{" "}
+                <br />
                 <span>who wanted more than just a jobbing accountant.</span>
               </h2>
               <p>
@@ -42,97 +63,20 @@ function ServicesPage() {
               <h2>WHAT WE DO</h2>
 
               <div className="row">
-                <div className="col-md-4">
-                  <div className="service-content">
-                    <h3>CLOUD ACCOUNTING</h3>
-                    <p>
-                      We have a goal, to be at the forefront of the new digital
-                      revolution, embracing technology and encouraging all of
-                      our clients to use cloud software.
-                    </p>
-                    <a href="#" class="yellow-btn">Learn More</a>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="service-content">
-                    <h3>SNAP RECEIPT APP</h3>
-                    <p>
-                      {" "}
-                      With our Snap app, you can take a photo of your receipts
-                      on the go and they will be loaded directly into your cloud
-                      accounting software. No receipt will ever be lost again!
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="service-content">
-                    <h3>SYSTEMS ADVICE</h3>
-                    <p>
-                      Our experts can devise a plan to help you move from a
-                      traditional accounting package to a cloud based system in
-                      a timely efficient manner.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="service-content">
-                    <h3>ACCOUNTING</h3>
-                    <p>
-                      We can structure our service to meet the needs of your
-                      business, be it for a sole trader, partnership or limited
-                      company always ensuring compliance.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="service-content">
-                    <h3>TAX</h3>
-                    <p>
-                      Our experts are here to work with you to ensure
-                      obligations are met and review how you are operating to
-                      maximise tax efficiency.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="service-content">
-                    <h3>PAYROLL & PENSIONS</h3>
-                    <p>
-                      Our payroll bureau can run your weekly or monthly payroll
-                      to ensure compliance with HMRC & The Pensions Regulator
-                      for RTI submissions and Pensions Auto Enrolment.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="service-content">
-                    <h3>STARTUPS</h3>
-                    <p>
-                      Discover everything you need to know to run a profitable
-                      and happy business. We are here to help you on that
-                      exciting journey.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="service-content">
-                    <h3>FORECASTING/BUDGETING</h3>
-                    <p>
-                      Now information is current and up to date with your cloud
-                      software, let us help you forecast how to move towards
-                      your future goals.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="service-content">
-                    <h3>OUTSOURCING</h3>
-                    <p>
-                      Our team can develop a package to help you with
-                      bookkeeping, VAT, payroll or management accounting.
-                    </p>
-                  </div>
-                </div>
+                {isLoading && <p>Wait while we are loading the Services</p>}
+                {servicesList.map((service, index) => {
+                  return (
+                    <div className="col-md-4">
+                      <div className="service-content">
+                        <h3>{service.title}</h3>
+                        <p>{service.shortDescription}</p>
+                        <a href="#" className="yellow-btn">
+                          Learn More
+                        </a>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
