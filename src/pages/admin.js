@@ -10,8 +10,16 @@ function admin(props) {
     <div>
       <AdminHeader props={props} />
       <Switch>
-        <Route path="/" component={CreateService} />
-        <Route path="/create-blog" component={CreateBlog} />
+        <Route
+          exact
+          path={`${props.match.url}/create-blog`}
+          component={CreateBlog}
+        />
+        <Route
+          exact
+          path={`${props.match.url}/create-service`}
+          component={CreateService}
+        />
       </Switch>
     </div>
   );

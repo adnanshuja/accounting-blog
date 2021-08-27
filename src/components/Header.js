@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import Navbar from "./Navbar.js";
 function Header() {
   return (

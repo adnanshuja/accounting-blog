@@ -10,19 +10,21 @@ function BlogsPage() {
   const [blogList, setBlogList] = useState([]);
 
   useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await axios.get(
-          "http://18.219.85.59:3001/api/blog/get-all"
-        );
+    if (isLoading) {
+      const fetchBlogs = async () => {
+        try {
+          const response = await axios.get(
+            "http://18.219.85.59:3001/api/blog/get-all"
+          );
 
-        setBlogList(response.data.data);
-        setIsLoading(false);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetchBlogs();
+          setBlogList(response.data.data);
+          setIsLoading(false);
+        } catch (e) {
+          console.log(e);
+        }
+      };
+      fetchBlogs();
+    }
   }, [blogList]);
   return (
     <main>
@@ -47,7 +49,7 @@ function BlogsPage() {
                 {isLoading && <p>Wait while we are loading the blogs</p>}
                 {blogList.map((blog, index) => {
                   return (
-                    <div className="col-md-4">
+                    <div className="col-md-4" key={index}>
                       <div className="blog-item">
                         <div className="blog-top">
                           <a href="">

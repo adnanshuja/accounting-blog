@@ -8,19 +8,21 @@ function ServicesPage() {
   const [servicesList, setServicesList] = useState([]);
 
   useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await axios.get(
-          "http://18.219.85.59:3001/api/service/get-all"
-        );
+    if (isLoading) {
+      const fetchBlogs = async () => {
+        try {
+          const response = await axios.get(
+            "http://18.219.85.59:3001/api/service/get-all"
+          );
 
-        setServicesList(response.data.data);
-        setIsLoading(false);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetchBlogs();
+          setServicesList(response.data.data);
+          setIsLoading(false);
+        } catch (e) {
+          console.log(e);
+        }
+      };
+      fetchBlogs();
+    }
   }, [servicesList]);
   return (
     <main>
@@ -66,7 +68,7 @@ function ServicesPage() {
                 {isLoading && <p>Wait while we are loading the Services</p>}
                 {servicesList.map((service, index) => {
                   return (
-                    <div className="col-md-4">
+                    <div className="col-md-4" key={index}>
                       <div className="service-content">
                         <h3>{service.title}</h3>
                         <p>{service.shortDescription}</p>

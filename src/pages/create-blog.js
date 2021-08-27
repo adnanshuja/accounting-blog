@@ -1,11 +1,65 @@
-import React from "react";
-function CreateBlog(props) {
-  return (
-    <div>
-      Welcome to Create-Blog page <br />
-      <br />
-    </div>
-  );
-}
+import React, { Component } from "react";
+import { convertToRaw } from "draft-js";
+import { Editor } from "react-draft-wysiwyg";
+import draftToHtml from "draftjs-to-html";
+import axios from "axios";
 
-export default CreateBlog;
+import "../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+
+export default class EditorConvertToHTML extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      editorState: "",
+      title: "",
+    };
+  }
+
+  onEditorStateChange = (editorState) => {
+    this.setState({
+      editorState,
+    });
+  };
+
+  onTitleChange = (event) => {
+    this.setState({
+      title: event.target.value,
+    });
+    console.log(this.state.title);
+  };
+
+  handlleSubmit = async (event) => {
+    event.preventDefault();
+    const htmlOfDescription = draftToHtml(
+      convertToRaw(this.state.editorState.getCurrentContent())
+    );
+
+    const response = await axios.post(
+      "http://18.219.85.59:3001/api/blog/create",
+      {
+        title: this.state.title,
+        description: htmlOfDescription,
+      }
+    );
+
+    console.log(
+      draftToHtml(convertToRaw(this.state.editorState.getCurrentContent()))
+    );
+  };
+
+  render() {
+    const { editorState, title } = this.state;
+    return (
+      <form onSubmit={this.handlleSubmit}>
+        <input type="text" value={title} onChange={this.onTitleChange} />
+        <Editor
+          editorState={editorState}
+          wrapperClassName="demo-wrapper"
+          editorClassName="demo-editor"
+          onEditorStateChange={this.onEditorStateChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    );
+  }
+}

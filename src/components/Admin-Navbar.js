@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { Component } from "react";
+import { NavLink, useRouteMatch } from "react-router-dom";
 
 import { removeUserSession } from "../utils/common";
 
@@ -9,10 +9,12 @@ const AdminNavbar = ({ props }) => {
     props.history.push("/login");
   };
 
+  const { path, url } = useRouteMatch();
+
   return (
     <nav>
-      <NavLink to="/create-service">Create Service</NavLink>
-      <NavLink to="/create-blog">Create Blog</NavLink>
+      <NavLink to={`${url}/create-service`}>Create Service</NavLink>
+      <NavLink to={`${url}/create-blog`}>Create Blog</NavLink>
       <input type="button" onClick={handleLogout} value="Logout" />
     </nav>
   );

@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Switch>
         <PublicRoute exact path="/login" component={Login} />
-        <PrivateRoute exact path="/admin" component={Admin} />
+        <PrivateRoute path="/admin" component={Admin} />
         <Route path="/" component={Web} />
       </Switch>
     </Router>
