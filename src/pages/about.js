@@ -43,7 +43,7 @@ function AboutusPage() {
                 </div>
               </div>
               <div className="col-md-6">
-                <div className="items-title text-left flex-center-section">
+                <div className="items-title text-left flex-center-section font-large">
                   <h3>Talk to real person now</h3>
                   <p>
                     When you ring us you are not going to be placed in a

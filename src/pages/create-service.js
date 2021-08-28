@@ -51,13 +51,21 @@ export default class EditorConvertToHTML extends Component {
     const { editorState, title } = this.state;
     return (
       <form onSubmit={this.handlleSubmit}>
-        <input type="text" value={title} onChange={this.onTitleChange} />
-        <Editor
+        <div className="field-item">
+            <label>Title</label>
+            <input type="text" value={title} onChange={this.onTitleChange} />
+          </div> 
+          <div className="field-item">
+            <label>Service Detail</label>
+            <Editor
           editorState={editorState}
           wrapperClassName="demo-wrapper"
           editorClassName="demo-editor"
           onEditorStateChange={this.onEditorStateChange}
         />
+          </div>
+
+        
         <button type="submit">Submit</button>
       </form>
     );
