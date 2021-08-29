@@ -259,10 +259,13 @@
   }
 }
 .items-title h3 {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   padding: 20px 0px;
   line-height: 30px;
+}
+.items-title.font-large h3 {
+  font-size: 36px;
 }
 @media (max-width: 768px) {
   .items-title h3 {
@@ -2116,4 +2119,113 @@ footer .footer-content .rights h4 {
   text-transform: uppercase;
   margin-bottom: 20px;
   font-weight: 600;
+}
+
+
+.admin-wrapper {
+
+}
+
+.topbar-wrapper{
+  background: #002553;
+  text-align: center;
+  padding: 10px 0;
+}
+.topbar-wrapper img {
+  height: 55px;
+}
+
+
+.admin-inner-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.admin-inner-wrapper .sidebar-wrapper {
+  max-width: 280px;
+  flex: 280px;
+  background: #002553;
+  height: calc(100vh - 75px);
+}
+
+.admin-inner-wrapper .main-content-wrapper {
+  background: #f7f7f7;
+  max-width: calc(100% - 280px);
+  flex: calc(100% - 280px);
+  padding: 30px;
+}
+.main-content-wrapper button[type=submit] {
+  background: #002553;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.rdw-editor-wrapper {
+  background: #fff;
+    margin-bottom: 20px;
+    border: solid 1px #dcdcdc;
+}
+
+.main-content-wrapper  input[type=text] {
+  width: 100%;
+  height: 43px;
+  border: solid 1px #dcdcdc;
+  box-shadow: inset 0 1px 3px rgb(0 0 0 / 50%);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.field-item input[type=text] {
+  width: 100%;
+  height: 43px;
+  border: solid 1px #dcdcdc;
+  box-shadow: inset 0 1px 3px rgb(0 0 0 / 50%);
+  border-radius: 4px;
+  font-size: 16px;
+}
+.field-item {
+  margin-bottom: 20px;
+}
+
+
+.field-item label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-family: monospace;
+}
+
+
+.sidebar-wrapper ul li {
+  display: block;
+  margin-bottom: 0;
+  padding: 12px 30px;
+  background: #032146;
+  border-bottom: solid 1px #07274f;
+}
+
+.sidebar-wrapper ul li a {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+}
+
+.sidebar-wrapper {
+}
+
+.sidebar-wrapper ul li a i {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.sidebar-wrapper ul li.logout input {
+  color: #fff;
+  background: #025c95;
+  padding: 2px 10px;
+  border-radius: 4px;
 }
