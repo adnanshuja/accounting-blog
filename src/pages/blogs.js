@@ -69,12 +69,11 @@ function BlogsPage() {
                           </span>
                           <ul>
                             <li>
-                              <Link to="/blog-details">
-                                Read More{" "}
+                              <Link to={`/blog-details/${blog.id}`}>
+                                Read More
                                 <i className="icofont-long-arrow-right"></i>
                               </Link>
                             </li>
-
                             <li>
                               <i className="fa fa-calendar"></i> Mar 24,2021
                             </li>

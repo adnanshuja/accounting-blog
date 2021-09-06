@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SideImage1 from "../images/sideimg1.png";
 import BannerImage from "../images/banner.jpg";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function ServicesPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -71,10 +72,13 @@ function ServicesPage() {
                     <div className="col-md-4" key={index}>
                       <div className="service-content">
                         <h3>{service.title}</h3>
-                        <p>{service.shortDescription}</p>
-                        <a href="#" className="yellow-btn">
+                        <p>{service.description1}</p>
+                        <Link
+                          to={`/service-detail/${service.id}`}
+                          className="yellow-btn"
+                        >
                           Learn More
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   );
