@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import dateFormat from "dateformat";
 
 import BannerImage from "../images/banner.jpg";
 
@@ -26,6 +27,10 @@ function BlogDetailPage() {
       fetchBlogDetails();
     }
   }, [blogDetails]);
+
+  function createMarkup() {
+    return { __html: blogDetails.description };
+  }
   return (
     <main>
       <article>
@@ -47,9 +52,13 @@ function BlogDetailPage() {
             <div className="items-title">
               <h2>{blogDetails.title}</h2>
               <p>
-                March 24, 2021 in <a href="">Blog</a> by <a href="">Zeeshan</a>
+                {dateFormat(`${blogDetails.createdAt}`, "mmmm dS, yyyy")}{" "}
+                <a href="">Blog</a> by <a href="">admin</a>
               </p>
-              {blogDetails.description}
+              <div
+                contentEditable="true"
+                dangerouslySetInnerHTML={createMarkup()}
+              ></div>
             </div>
           </div>
         </section>

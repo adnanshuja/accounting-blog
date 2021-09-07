@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import dateFormat from "dateformat";
 
 import BannerImage from "../images/banner.jpg";
 import Blog1 from "../images/blog-1.jpg";
@@ -26,6 +27,11 @@ function BlogsPage() {
       fetchBlogs();
     }
   }, [blogList]);
+
+  function createMarkup(description) {
+    return { __html: description };
+  }
+
   return (
     <main>
       <article>
@@ -65,7 +71,12 @@ function BlogsPage() {
                             <a href="">{blog.title}</a>
                           </h3>
                           <span className="excerpt">
-                            <p>{blog.description}</p>
+                            <div
+                              contentEditable="false"
+                              dangerouslySetInnerHTML={createMarkup(
+                                blog.description
+                              )}
+                            ></div>
                           </span>
                           <ul>
                             <li>
@@ -75,7 +86,8 @@ function BlogsPage() {
                               </Link>
                             </li>
                             <li>
-                              <i className="fa fa-calendar"></i> Mar 24,2021
+                              <i className="fa fa-calendar"></i>{" "}
+                              {dateFormat(`${blog.createdAt}`, "mmmm dS, yyyy")}{" "}
                             </li>
                           </ul>
                         </div>
